@@ -7,6 +7,7 @@ subroutine shock (yield,height,tim,ra,opr,odr,vr)
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
 
     real alt, vsl, dsl, tsl, csl, psl, t, r
+    real prado, oppko, odpko, opro, odro, vpko, vro
 
     alt=height
 

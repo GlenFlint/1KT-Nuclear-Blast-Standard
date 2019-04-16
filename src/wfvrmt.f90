@@ -1,6 +1,8 @@
 subroutine wfvrmt (t,r)
     implicit none
 
+    real t, r
+
     save
 
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
@@ -11,7 +13,8 @@ subroutine wfvrmt (t,r)
     real ttold /0./
 
     real aln, alpha, bcrmn, beta, bln, bgz, bgzl, cgz, cgzl, crnmlb, dnom
-    real fmlt, fngz, hr, ovmhy, ovmnln, rbr, rpk, r, rmn, rz, vr, wflt
+    real fmlt, fngz, hr, ovmhy, ovmnln, rbr, rpk, rmn, rz, wflt
+    real rneg, rpls, rnp, crmnlb, gr, rtio
 
     rpk=prad
 

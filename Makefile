@@ -11,10 +11,10 @@
 # Change this line if you are using a different Fortran compiler
 FORTRAN_COMPILER = gfortran
 
-all: src/HelloWorld.f90
+all: src/*.f90
 	$(FORTRAN_COMPILER) -O2 -g \
 		-o bin/HelloWorld \
-		src/HelloWorld.f90
+		src/*.f90
 
 clean:
 	rm -f bin/HelloWorld *.mod

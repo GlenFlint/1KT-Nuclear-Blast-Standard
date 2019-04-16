@@ -2,7 +2,7 @@ subroutine well (t,r,depth)
     implicit none
 
     real t,r,depth
-    c
+
     save
 
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.

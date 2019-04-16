@@ -4,7 +4,9 @@ subroutine air (eee,rrr,gmone,p,temp)
 
     real eee, rrr, gmone, p, temp
 
-    real alr, beta, c1, c2, con, e, e1, e2, fe, fo, fon, g, gm, h, rholn, swit, ws
+    real alr, beta, c1, c2, con, con1, con2, e, e1, e2,  &
+         f, fe, fn, fo, fon,                             &
+         g, gm, h, rholn, rhols, swit, ws
 
     e=eee*1.0e-10
     rholn=alog(773.39520495*rrr)

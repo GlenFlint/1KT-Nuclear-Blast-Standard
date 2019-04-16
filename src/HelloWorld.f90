@@ -11,6 +11,8 @@ Program MAIN
 
     real yield, height, tim, ra, opr, odr, vr
 
+    integer i
+
     yield=1.
     height=100.
     tim=.25

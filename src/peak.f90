@@ -12,7 +12,11 @@ subroutine peak(t,ra,prado,oppko,odpko,opro,odro,vpko,vro)
     real          prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
 
     real told /0./
-    real psca /0.1/, vsca /0.01/, rhosca /1000./
+    real, parameter :: psca = 0.1, vsca = 0.01, rhosca = 1000.
+
+    real r, ow, rzdm, rzvm, odw
+
+    real wfvzr, wfpr, wfzr, wfdzr, wfpkop, wfpkod, wfpkv
 
     ! Convert distance to cm
     r=ra*100.

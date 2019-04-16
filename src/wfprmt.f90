@@ -12,11 +12,12 @@ subroutine wfprmt (t,r)
 
     real ttold /0./
 
-    real a, alpha, b, beta, bcrmn, bgz, bgzl, cgz, cgzl, crmnlb
-    real dnom, fngz, fmlt, opmn, r, rmn, rpk, rz
+    real a, alpha, aln, b, beta, bcrmn, bgz, bgzl, bln, c, cgz, cgzl, crmnlb
+    real dnom, fngz, fmlt, gr, hr, rbr, rmn, rneg, rpls, rnp, rpk, rz, wflt
+    real opmnln, opmhy
 
     rpk=prad
-    c
+
     if (t .ge. 0.1) then
 
         rpk=rpk*1.e-5
@@ -47,7 +48,7 @@ subroutine wfprmt (t,r)
             bgzl=crmnlb/cgz**(rnp**fngz)
             bgz=exp(bgzl)
         endif
-        c
+
         rbr=rpk-r
         gr=1.-bgz**(cgz**(rbr**fngz))
         if (r .gt. rz) gr=(rpk-r)/rpls*gr+(r-rz)/rpls

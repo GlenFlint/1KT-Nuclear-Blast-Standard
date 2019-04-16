@@ -3,7 +3,7 @@ function wfpkop (r)
     implicit none
 
     real wfpkop, r
-    real
+
     save
     !
     ! Calculates the waveform peak overpressure (wfpkop) at the specified

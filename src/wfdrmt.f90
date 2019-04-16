@@ -11,8 +11,10 @@ subroutine wfdrmt (t,r)
 
     real ttold /0./
 
-    real rpk, rmn, rz, rnp, rneg, rbr, odmnln, alpha, beta, crmnlb
-    real a, b, fngz, aln, bln, beta, bgz, bgzl, cgz, cgzl
+    real rpk, rmn, rz, rnp, rneg, rbr, odmnln, alpha, beta, crmnlb,  &
+         a, b, c, fngz, aln, bln, bgz, bgzl, cgz, cgzl, rpls, fmlt,  &
+         dnom, bcrmn, gr, hr, odmhy, wflt
+
 
     rpk=prad
 
@@ -41,8 +43,10 @@ subroutine wfdrmt (t,r)
             dnom=alpha*rnp+beta
             bcrmn=1.-odmn/(rnp/dnom+odpk)
             crmnlb=alog(bcrmn)
-            cgzl=(beta*(1./bcrmn-1.)/dnom)/((fngz*crmnlb
-            *rnp**(fngz-1.))*(rnp+odpk*dnom))
+
+            cgzl=(beta*(1./bcrmn-1.)/dnom)/  &
+                 ((fngz*crmnlb*rnp**(fngz-1.))*(rnp+odpk*dnom))
+
             cgz=exp(cgzl)
             bgzl=crmnlb/cgz**(rnp**fngz)
             bgz=exp(bgzl)

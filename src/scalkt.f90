@@ -2,6 +2,8 @@ subroutine scalkt (hfpt,wb,vscale,dscale,tscale,cscale,pscale)
 
     implicit none
 
+    real hfpt,wb,vscale,dscale,tscale,cscale,pscale
+
     save
     ! This routine sets up the scale factors for each burst so the 1 KT
     ! sea level data may be used
@@ -21,10 +23,10 @@ subroutine scalkt (hfpt,wb,vscale,dscale,tscale,cscale,pscale)
     !
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
     !
-    real hfpt,wb,tscale, vscale, pscale, dscale, cscale
-    real wsw, c3, r3, p3
+
+    real wsw, c3, r3, p3, t3, rp3, x, cubrt
     real hn(4)
-    real p1 /1.01325e5/, c1 /3.4029399e2/, r1 /1.225/, t1 /288.15/
+    real, parameter :: p1 = 1.01325e5, c1 = 3.4029399e2, r1 = 1.225, t1 = 288.15
 
     cubrt(x)=sign(exp(alog(abs(x))/3. ),x)
 

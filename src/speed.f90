@@ -2,6 +2,10 @@ function speed (t)
 
     implicit none
 
+    real speed, t
+
+    real r1, r2, v1, v2, v3
+
     save
     !
     ! This routine is the time derivative of wfpr2. It returns the

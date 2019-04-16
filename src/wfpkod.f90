@@ -1,6 +1,8 @@
 function wfpkod (dummy)
     implicit none
 
+    real wfpkod, dummy
+
     save
 
     ! This routine computes the peak overdensity given the peak
@@ -12,8 +14,11 @@ function wfpkod (dummy)
     real          prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
 
     real rhoz /1.225e-3/, opz /1.01325e6/, gamm1 /0.404574/
-    real op, rtio, p, gmone, gamma, gamra, rhol, ee, gamrao
+    real op, rtio, p, gmone, gamma, gamra, rho1, ee, gamrao
+    real dum1, dum2
+
     integer n
+
     op=oppk
     rtio=op/opz
     p=op+opz
