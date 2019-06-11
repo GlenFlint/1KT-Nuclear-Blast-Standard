@@ -2,7 +2,9 @@ subroutine air (eee,rrr,gmone,p,temp)
 
     implicit none
 
-    real eee, rrr, gmone, p, temp
+    real, intent(in)  :: eee, rrr 
+    
+    real, intent(out) :: gmone, p, temp		! TODO: temperature units?
 
     real alr, beta, c1, c2, con, con1, con2, e, e1, e2,  &
          f, fe, fn, fo, fon,                             &

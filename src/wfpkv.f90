@@ -12,12 +12,9 @@ function wfpkv (dummy)
     !
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
 
-    common /wfrt/ prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
-    real          prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
+    include "wfrt.inc"
 
-    real rhoz /1.225e-3/
-
-    wfpkv=sqrt(oppk*odpk/(rhoz*(rhoz+odpk)))
+    wfpkv=sqrt(oppk*odpk/(AIR_DENSITY*(AIR_DENSITY+odpk)))
 
     return
 end

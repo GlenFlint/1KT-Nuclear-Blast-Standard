@@ -13,14 +13,19 @@ Program MAIN
 
     integer i
 
-    yield=1.
-    height=100.
-    tim=.25
+    yield=180.
+    height=900.0
+    tim=15.0
+
+    Print 940
 
     do 1 I=1,250
-        ra=float(I)
+        ra=float(I)*25.0
         call shock(yield,height,tim,ra,opr,odr,vr)
         Print 950, tim,ra,opr,odr,vr
   1  continue
+
+!            123456789012123456789012123456789012123456789012123456789012123456789012
+ 940 format("Time      Radius (m)    Pressure    Density     Velocity")
  950 format(1P8e12.4)
 end

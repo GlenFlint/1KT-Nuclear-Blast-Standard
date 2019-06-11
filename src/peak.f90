@@ -8,8 +8,7 @@ subroutine peak(t,ra,prado,oppko,odpko,opro,odro,vpko,vro)
 
     real t,ra,prado,oppko,odpko,opro,odro,vpko,vro
 
-    common /wfrt/ prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
-    real          prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
+    include "wfrt.inc"
 
     real told /0./
     real, parameter :: psca = 0.1, vsca = 0.01, rhosca = 1000.

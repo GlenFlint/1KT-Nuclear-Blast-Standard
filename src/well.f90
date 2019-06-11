@@ -7,9 +7,7 @@ subroutine well (t,r,depth)
 
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
 
-    common /wfrt/ prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
-
-    real          prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
+    include "wfrt.inc"
 
     real rmsw
 

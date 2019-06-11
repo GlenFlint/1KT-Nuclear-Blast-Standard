@@ -2,7 +2,9 @@ function wfpkop (r)
 
     implicit none
 
-    real wfpkop, r
+    real wfpkop
+    
+    real, intent(in) :: r   ! Radius in cm
 
     save
     !
@@ -15,17 +17,20 @@ function wfpkop (r)
     !
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
     !
-    common /wfrt/ prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
-    real          prad,oppk,odpk,vpk,opr,odr,vr,rzp,rzd,rzv,opmn,odmn,vmn
+    ! See page 33
+    !
+    include "wfrt.inc"
 
-    real ac /3.04e18/, aq /1.13e14/, astar /7.9e9/, rstar /4.454e4/
+    real, parameter :: A = 3.04e18
+    real, parameter :: B = 1.13e14
+    real, parameter :: C = 7.9e9
+	real, parameter :: R0 = 4.454e4
 
-    real rr, rtio, cf
+    real ratio, cfactor
 
-    rr=1./r
-    rtio=2.24517e-5*r
-    cf=sqrt(alog(rtio+3.*exp(-(sqrt(rtio)/3.))))
-    wfpkop=((ac*rr+aq)*rr+astar/cf)*rr
+    ratio   = r/R0
+    cfactor = sqrt(alog(ratio+3.*exp(-(sqrt(ratio)/3.))))
+    wfpkop  = ((A/r+B)/r+C/cfactor)/r
 
     return
 end
