@@ -4,6 +4,7 @@ subroutine wfprmt (t,r)
     real t, r
 
     save
+    ! Calculate the overpressure at r.
     !
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
     !

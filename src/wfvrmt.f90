@@ -5,6 +5,8 @@ subroutine wfvrmt (t,r)
 
     save
 
+	! Calculate the velocity at r.
+	!
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
 
     include "wfrt.inc"

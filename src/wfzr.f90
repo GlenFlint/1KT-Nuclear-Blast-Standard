@@ -1,7 +1,7 @@
 function wfzr (t)
     implicit none
 
-    real t
+    real, intent(in) :: t
 
     save
 
@@ -17,8 +17,13 @@ function wfzr (t)
     !   wfzr - Radius (cm)
     !
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
+    
+    ! See section 4.6.1.1
     !
-    real b /0.03291/, c /-1.086/, cz /33897./, bz /8490./
+    real, parameter :: B  = 0.03291
+    real, parameter :: C  = -1.086
+    real, parameter :: CZ = 33897.0
+    real, parameter :: BZ = 8490.
     real wfzr
 
     wfzr=0.
@@ -26,7 +31,7 @@ function wfzr (t)
     if (t .lt. 0.) then
         call terror (t, 'wfzr ')
     else
-        wfzr=(1.-b*t**c)*(cz*t+bz)
+        wfzr=(1.-B*t**C)*(CZ*t+BZ)
     endif
 
     return

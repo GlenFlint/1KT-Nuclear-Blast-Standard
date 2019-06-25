@@ -4,6 +4,8 @@ subroutine wfdrmt (t,r)
 
     save
 
+	! Calculate the overdensity at r.
+	!
     ! This routine is part of the AFWL 1KT Standard by Needham, et al.
 
     include "wfrt.inc"
